@@ -77,7 +77,7 @@
         exit;
     }
 
-    include('database.php');
+    include('database.env');
     try {
         $connection = new PDO($dsn, $dbuser, $dbpassword);
     } catch (PDOException $exception) {
