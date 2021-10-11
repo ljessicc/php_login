@@ -5,8 +5,6 @@ if(!isset($_SESSION['loggedIn'])){
     session_destroy();
     header('location:login.php');
 }
-
-
 ?>
 
 <!DOCTYPE html>

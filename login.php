@@ -10,6 +10,7 @@ include('head.php'); ?>
 
 <body>
    <style>
+    
       .container {
          background-color: teal;
          width: 870px;
@@ -19,9 +20,23 @@ include('head.php'); ?>
       }
       .form-group-last button{
           background-color: paleturquoise !important;
-          color: orchid;
+          color: teal;
       }
-      
+      .text-center{
+          margin-top: 10px;
+      }
+      .text-center   a {
+            text-decoration: none;
+            color: orange;
+            font-weight: 800;
+            font-style: italic;
+            padding: 5px 10px;
+        }
+        .text-center   a:hover{
+            text-decoration: none;
+            color: white;
+            text-shadow: 1px 2px 5px black;
+        }
    </style>
 
    <?php include('navbar.php');

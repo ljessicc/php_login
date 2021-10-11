@@ -11,9 +11,10 @@ include('head.php'); ?>
             background-color: teal;
             margin-top: 80px;
             width: 870px;
-            height: 450px;
+            height: 470px;
             color: white;
             text-align: center;
+            border: 7px solid lightslategray;
         }
 
         form {
@@ -34,6 +35,18 @@ include('head.php'); ?>
             padding: 10px;
             background-color: paleturquoise;
             color: black;
+        }
+       .text-center a {
+            text-decoration: none;
+            color: orange;
+            font-weight: 800;
+            font-style: italic;
+            padding: 5px 10px;
+        }
+        .text-center a:hover{
+            text-decoration: none;
+            color: white;
+            text-shadow: 1px 2px 5px black;
         }
     </style>
 

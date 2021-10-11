@@ -7,11 +7,9 @@ $data= $_POST;
 
 $username = $data['username'];
 $password = $data['password'];
+$hash = password_hash($password, PASSWORD_DEFAULT);
 
-$dsn = 'mysql:dbname=userRegistration; host=localhost';
-$dbuser = 'root';
-$dbpassword = 'Klassic,1993';
-
+include('database.php');
 try {
     $connection = new PDO($dsn, $dbuser, $dbpassword);
 } catch (PDOException $exception) {
@@ -31,11 +29,10 @@ if(empty($result)){
 };
 $user = array_shift($result);
 
-if ($user['username'] === $username && $user['password'] === $password){
+if ($user['username'] === $username && password_verify($password,$hash)){
     $_SESSION['username'] = $user['username'];
 
-    echo 'Successfully Logged In. <br> Go to <a href="dashboard.php">My account </a>';
-    // header('location:dashboard.php');
+     header('location:dashboard.php');
     exit;
 } else {
     $_SESSION['messages'][]='Incorrect username or Password!';

@@ -8,19 +8,29 @@ $page = 'home';
 include('head.php'); ?>
 
 <body>
+<?php include('navbar.php');
+   ?>
    <style>
       .container {
          background-color: teal;
+         border: 7px solid lightslategray;
          width: 870px;
          height: 450px;
+         margin-top: 70px;
          color: white;
          text-align: center;
       }
+      button{
+         border: none;
+         border-radius: 5px;
+         padding: 5px 10px;
+         background-color: lightgreen;
+      }
+      a{
+         color: black;
+         font-weight: 800;
+      }
    </style>
-
-
-   <?php include('navbar.php');
-   ?>
 
    <div class="container">
    <h1>Welcome to PHP FORMS</h1>
